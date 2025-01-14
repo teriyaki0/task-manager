@@ -9,7 +9,7 @@ import {
 interface ModalTaskProps {
   isOpen: boolean;
   onClose: () => void;
-  taskToEdit?: Task; 
+  taskToEdit?: Task;
 }
 
 const AddTaskForm: React.FC<ModalTaskProps> = ({
@@ -55,7 +55,7 @@ const AddTaskForm: React.FC<ModalTaskProps> = ({
         await addTask(data).unwrap();
         window.location.reload();
       }
-      onClose(); 
+      onClose();
     } catch (error) {
       console.error("Error saving task:", error);
     }
@@ -133,6 +133,8 @@ const AddTaskForm: React.FC<ModalTaskProps> = ({
             name="status"
             control={control}
             render={({ field }) => (
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error
               <input
                 type="checkbox"
                 id="status"
