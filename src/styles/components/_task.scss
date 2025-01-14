@@ -1,0 +1,86 @@
+@use "../variables" as *;
+
+.taskItem {
+  background-color: $gray;
+  color: $white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 20px);
+
+  .taskTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .taskDescription {
+    font-size: 1rem;
+    color: $white, 20%;
+    margin-bottom: 10px;
+  }
+
+  .taskPriority {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+
+    &.high {
+      color: $danger;
+    }
+
+    &.medium {
+      color: orange;
+    }
+
+    &.low {
+      color: green;
+    }
+
+    &.none {
+      color: gray;
+    }
+  }
+
+  .taskStatus {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .deleteButton {
+    background-color: $danger;
+    color: $white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 10px 10px 0 0;
+  }
+
+  .updateButton {
+    background-color: $blue;
+    color: $white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 10px 10px 0 0;
+  }
+}
+@media (max-width: 965px) {
+  .taskItem {
+    width: calc(33% - 20px);
+  }
+}
+@media (max-width: 720px) {
+  .taskItem {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 524px) {
+  .taskItem {
+    width: 100%;
+  }
+}

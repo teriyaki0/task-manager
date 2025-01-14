@@ -1,0 +1,11 @@
+@use "./variables" as *;
+@use "./libs/normalize";
+@use "./components/all";
+
+body {
+  background-color: $background;
+}
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}

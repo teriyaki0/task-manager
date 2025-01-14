@@ -1,0 +1,61 @@
+@use "../variables" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal_delete {
+  background: $gray;
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  p {
+    margin: 20px 0 0 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 16px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: $danger;
+  color: $white;
+  font-size: 14px;
+}
+.modal-actions {
+  margin-top: 20px;
+  gap: 20px;
+  display: flex;
+}
+
+.close-button {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
